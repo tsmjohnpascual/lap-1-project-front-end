@@ -25,12 +25,22 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-content: space-between;
     margin-right: 15%;
     margin-left: 15%;
 }
 
 .journal-container {
-    width: 50%;
+    background-color: #E7F6F2;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 40%;
+    color: #2C3333;
+    border-radius: 2%;
+}
+
+.journal-container a {
+    
 }
 
 .journal-container p {
