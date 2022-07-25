@@ -82,7 +82,7 @@ input[type=submit]:hover {
     padding: 2% 5%;
 }
 
-.entry a {
+.entry-title {
     text-decoration: none;
     color: #2C3333;
 }
@@ -95,9 +95,59 @@ input[type=submit]:hover {
     /* display: flex; */
 }
 
+/* .icon {
+    display: block;
+} */
+
 span {
     font-size: 0.8rem;
     
+}
+
+/* comments and reactions  */
+
+.entry-interactions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.emoji-divs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.emoji-divs:hover {
+   cursor: pointer;
+}
+
+.comment-link {
+    text-decoration: none;
+    color: #2C3333;
+}
+
+.comment:hover {
+    background-color: rgb(165, 201, 202, 0.4);
+    color: rgb(57, 91, 100);
+}
+
+.like:hover {
+    background-color: rgb(60, 207, 78, 0.4);
+    color: rgb(26, 77, 46);
+}
+
+.heart:hover {
+    background-color: rgb(178, 80, 104, 0.4);
+    color: rgb(119, 67, 96)
+}
+
+.hate:hover {
+    background-color: rgb(235, 71, 71, 0.4);
+    color: rgb(99, 6, 6);
 }
 
 /* footer */
