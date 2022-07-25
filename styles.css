@@ -23,13 +23,18 @@ body {
 
 .journals {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-right: 15%;
+    margin-left: 15%;
 }
 
 .journal-container {
-    padding: 2% 15%;
+    width: 50%;
+}
+
+.journal-container p {
+    padding: 2% 5%;
 }
 
 /* footer */
