@@ -43,8 +43,23 @@ textarea {
     resize: none;
 }
 
+input[type=button] {
+    width: 49%;
+    background-color: #A5C9CA;
+    color: #2C3333;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #395B64;
+}
+
 input[type=submit] {
-    width: 100%;
+    width: 49%;
     background-color: #A5C9CA;
     color: #2C3333;
     padding: 14px 20px;
@@ -164,3 +179,61 @@ footer {
     padding: 5% 5% 5% 5%;
 }
 
+/* modal */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    color: black;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* The gifs container */
+
+  .modal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .gif-divs {
+    height: 200px;
+    width: 50%;
+  }
+
+  .gif-size {
+    max-width: 100%;
+    max-height: 100%;
+  }
