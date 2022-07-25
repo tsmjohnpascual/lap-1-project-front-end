@@ -77,12 +77,16 @@ function getGif () {
 }
 
 function pasteGif () {
-    let gif = document.querySelector(".gif-size")
-        gif.addEventListener("click", e => {
-        e.preventDefault()
-        let gifImg = document.getElementById("gifAttachment")
-        gifImg.src = gif.src
-        gifImg.alt = gif.alt
-    })
+    let elements = document.querySelectorAll(".gif-size")
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("click", e => {
+            e.preventDefault()
+            let gifImg = document.getElementById("gifAttachment")
+            gifImg.src = elements[i].src
+            gifImg.alt = elements[i].alt
+        })
+    }
+        
 }
 
