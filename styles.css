@@ -58,6 +58,8 @@ input[type=submit]:hover {
     background-color: #395B64;
 }
 
+/* journals */
+
 .journals {
     display: flex;
     flex-wrap: wrap;
@@ -87,6 +89,15 @@ input[type=submit]:hover {
 
 .entry a:hover {
     color: #395B64
+}
+
+.entry-info {
+    /* display: flex; */
+}
+
+span {
+    font-size: 0.8rem;
+    
 }
 
 /* footer */
