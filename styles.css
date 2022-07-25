@@ -16,9 +16,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-right: 15%;
-    margin-left: 15%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/* form */
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #A5C9CA;
+    color: #2C3333;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #395B64;
 }
 
 .journals {
@@ -26,8 +63,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-between;
-    margin-right: 15%;
-    margin-left: 15%;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .journal-container {
@@ -39,12 +76,17 @@ body {
     border-radius: 2%;
 }
 
-.journal-container a {
-    
+.entry {
+    padding: 2% 5%;
 }
 
-.journal-container p {
-    padding: 2% 5%;
+.entry a {
+    text-decoration: none;
+    color: #2C3333;
+}
+
+.entry a:hover {
+    color: #395B64
 }
 
 /* footer */
