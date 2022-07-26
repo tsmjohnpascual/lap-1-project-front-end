@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "title 1",
+      "text": "some text",
+      "comments": ["wow the first post!", "does it work?"]
+    }
+  ]
+}
