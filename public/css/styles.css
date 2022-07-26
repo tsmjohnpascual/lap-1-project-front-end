@@ -313,3 +313,9 @@ input[type=submit]:hover {
     max-height: 100%;
     cursor: pointer;
   }
+
+  /* post-page */
+
+  .postPageContainer {
+    flex-direction: column;
+  }

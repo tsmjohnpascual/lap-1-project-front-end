@@ -14,44 +14,66 @@
     <title>X-Force</title>
 </head>
 <body>
-    <div class="page-container">
-        <header>
-            <div class="container">
-                <nav>
-                    <h1>X-Diary</h1>
-                    <a href="/post" id="createPostLink"><h2>Create a Post</h2></a>
-                </nav>
+    <header>
+        <div class="container" id="header-container">
+            <a href="/" class="nav-links">X-Diary</a>
+            <i class="fas fa-user-ninja fa-3x logo-icon"></i>
+            <a href="/post" class="nav-links">Create Post</a>
+        </div>
+    </header>
+    <main>
+        <div class="container postPageContainer">
+            <div>
+                <h1><%= title %></h1>  
+                <p><%= text %></p> 
             </div>
-        </header>
-        <main>
-            <div class="journals">
-                <div class="journal-container">
-                    <div class="entry">
-                        <a href="" class="entry-title">
-                            <h2><%= title %></h2>
-                         </a>
-                         <div class="entry-info">
-                            <i class="far fa-user fa-lg icon"></i>
-                            <div>
-                                <span>willow oceanseed</span> <br>
-                                <span>2 hours ago</span>
-                            </div>
-                         </div>
-                        <p><%= text %></p>
-                        <div class="entry-interactions">
-                            <div class="emoji-divs comment"><a href="" class="comment-link"><i class="fa-regular fa-comment fa-lg"></i></a><span>0</span></div>
-                            <div class="emoji-divs like"><i class="fa-regular fa-thumbs-up fa-lg"></i><span>0</span></div>
-                            <div class="emoji-divs heart"><i class="fa-regular fa-heart fa-lg"></i><span>0</span></div>
-                            <div class="emoji-divs hate"><i class="fa-regular fa-hand-middle-finger fa-lg"></i><span>0</span></div>
-                        </div>
-                    </div>
+            <div>
+                <h2>Comments</h2>
+            <%    for (let i = 0; i < comments.length; i++) { %>
+                    <p><%= comments[i] %></p>
+            <%    } %>
+            </div>
+            <form action="/postPage/<%= title %>" method="post">
+                <input type="text" name="comment" id="coment" placeholder="Add a comment...">
+                <div>
+                    <img src="" alt="" id="gifAttachment" name="gif">
                 </div>
-        </main>
-        <footer>
-            <div class="container">
-                <p class="footer-paragraph">Copyright <i class="far fa-copyright"></i> 2022 X-Force. All rights reserved.</p>
-            </div>
-        </footer>
+                <div class="button-div">
+                    <input type="button" id="myBtn" value="Giphy">
+                    <input type="submit" name="button" value="Post">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer-container">
+        <div class="container">
+            <p class="footer-paragraph">Copyright <i class="far fa-copyright"></i> 2022 X-Force. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- modal -->
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>  
+            <form class="modal-form">
+                <input type="text" name="search" id="search" placeholder="Search Giphy">
+                <button id="btnSearch" type="submit"><i class="fa-solid fa-magnifying-glass fa-lg modalSearchIcon"></i></button> 
+            </form>
+          <div class="modal-container">
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif0"></div>
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif1"></div>
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif2"></div>
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif3"></div>
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif4"></div>
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif5"></div>
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif6"></div>
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif7"></div>
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif8"></div>
+            <div class="gif-divs"><img src="" alt="" class="gif-size" id="gif9"></div>
+          </div>
+        </div>
     </div>
 </body>
 </html>

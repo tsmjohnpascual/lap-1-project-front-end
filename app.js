@@ -25,7 +25,8 @@ app.post("/post", (req, res) => {
 
     let newPost = {
         title: req.body.title,
-        text: req.body.text
+        text: req.body.text,
+        comments: []
     }
 
     posts.push(newPost)
@@ -39,11 +40,22 @@ app.get("/postPage/:postName", (req, res) => {
 
     for (let i = 0; i < posts.length; i++) {
         if (_.lowerCase(posts[i].title) === postName) {
-            res.render("postPage", {title: posts[i].title, text: posts[i].text})
+            res.render("postPage", {title: posts[i].title, text: posts[i].text, comments: posts[i].comments})
         }
     }
 })
 
+app.post("/postPage/:postName", (req, res) => {
+    let postName = _.lowerCase(req.params.postName)
+    let newComment = req.body.comment
+
+    for (let i = 0; i < posts.length; i++) {
+        if (_.lowerCase(posts[i].title) === postName) {
+            posts[i].comments.push(newComment)
+            res.render("postPage", {title: posts[i].title, text: posts[i].text, comments: posts[i].comments})
+        }
+    }
+})
 
 
 
