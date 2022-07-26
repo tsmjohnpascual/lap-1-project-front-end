@@ -16,37 +16,14 @@
 <body>
     <div class="page-container">
         <header>
-            <div class="container">
-                <nav>
-                    <h1>X-Diary</h1>
-                    <a href="/post" id="createPostLink"><h2>Create a Post</h2></a>
-                </nav>
+            <div class="container" id="header-container">
+                <a href="/" class="nav-links">X-Diary</a>
+                <i class="fas fa-user-ninja fa-3x logo-icon"></i>
+                <a href="/post" class="nav-links">Create Post</a>
             </div>
         </header>
         <main>
-            <div class="journals">
-                <div class="journal-container">
-                    <div class="entry">
-                        <a href="" class="entry-title">
-                            <h2>Growing up</h2>
-                         </a>
-                         <div class="entry-info">
-                            <i class="far fa-user fa-lg icon"></i>
-                            <div>
-                                <span>willow oceanseed</span> <br>
-                                <span>2 hours ago</span>
-                            </div>
-                         </div>
-                        <p>boy is been a long time ago since i’ve been in this website! A couple of years ago this website reached out to me so I can reuse it. I was like naw and I had forgotten about this site as a whole. Now things are different. Now here writing on an old iPad mini in my apartment bed. I know live with my boyfriend, I’ve been with him for ten years!!!! Is so crazy. My back hurts and I’m thinking of wearing shorts and skating to work.</p>
-                        <div class="entry-interactions">
-                            <div class="emoji-divs comment"><a href="" class="comment-link"><i class="fa-regular fa-comment fa-lg"></i></a><span>0</span></div>
-                            <div class="emoji-divs like"><i class="fa-regular fa-thumbs-up fa-lg"></i><span>0</span></div>
-                            <div class="emoji-divs heart"><i class="fa-regular fa-heart fa-lg"></i><span>0</span></div>
-                            <div class="emoji-divs hate"><i class="fa-regular fa-hand-middle-finger fa-lg"></i><span>0</span></div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="container journals">
 
             <%    for (let i = 0; i < posts.length; i++) { %>
                     <div class="journal-container">
@@ -73,13 +50,9 @@
                     </div>
             <%    } %>
 
-
-
-
-
             </div>
         </main>
-        <footer>
+        <footer class="footer-container">
             <div class="container">
                 <p class="footer-paragraph">Copyright <i class="far fa-copyright"></i> 2022 X-Force. All rights reserved.</p>
             </div>
