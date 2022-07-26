@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/701be9d26f.js" crossorigin="anonymous" defer></script>
+    <script src="./scripts/modal.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
+    <title>X-Force</title>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="container">
+                <nav>
+                    <h1>X-Diary</h1>
+                    <a href="/post" id="createPostLink"><h2>Create a Post</h2></a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="journals">
+                <div class="journal-container">
+                    <div class="entry">
+                        <a href="" class="entry-title">
+                            <h2><%= title %></h2>
+                         </a>
+                         <div class="entry-info">
+                            <i class="far fa-user fa-lg icon"></i>
+                            <div>
+                                <span>willow oceanseed</span> <br>
+                                <span>2 hours ago</span>
+                            </div>
+                         </div>
+                        <p><%= text %></p>
+                        <div class="entry-interactions">
+                            <div class="emoji-divs comment"><a href="" class="comment-link"><i class="fa-regular fa-comment fa-lg"></i></a><span>0</span></div>
+                            <div class="emoji-divs like"><i class="fa-regular fa-thumbs-up fa-lg"></i><span>0</span></div>
+                            <div class="emoji-divs heart"><i class="fa-regular fa-heart fa-lg"></i><span>0</span></div>
+                            <div class="emoji-divs hate"><i class="fa-regular fa-hand-middle-finger fa-lg"></i><span>0</span></div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <footer>
+            <div class="container">
+                <p class="footer-paragraph">Copyright <i class="far fa-copyright"></i> 2022 X-Force. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
