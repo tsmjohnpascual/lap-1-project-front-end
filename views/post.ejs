@@ -27,14 +27,15 @@
                     <label for="title">Title</label>
                     <input type="text" name="title" id="title" placeholder="Your title..">
                     <label for="text">Description</label>
-                    <textarea name="text" id="text" placeholder="What's up?"></textarea>
+                    <textarea name="text" id="text" placeholder="What's up?" maxlength="256"></textarea>
                     <div>
                         <img src="" alt="" id="gifAttachment" name="gif">
                     </div>
                     <div class="button-div">
                         <input type="button" id="myBtn" value="Giphy">
-                        <input type="submit" name="button" value="Post">
+                        <input type="submit">
                     </div>
+                    <input type="hidden" name="gif" value="">
                 </form>
         </div>
     </main>

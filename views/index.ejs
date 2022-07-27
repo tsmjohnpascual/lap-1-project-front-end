@@ -27,23 +27,29 @@
             <%    for (let i = 0; i < posts.length; i++) { %>
                     <div class="journal-container">
                         <div class="entry">
-                            <a href="/postPage/<%=posts[i].title%>" class="entry-title">
-                                <h2><%=posts[i].title%></h2>
-                             </a>
+                            <div>
+                                <a href="/postPage/<%=posts[i].title%>" class="entry-title">
+                                    <h2><%=posts[i].title%></h2>
+                                 </a>
+                            </div>
                              <div class="entry-info">
                                 <i class="far fa-user fa-lg icon"></i>
                                 <div>
                                     <span>willow oceanseed</span> <br>
-                                    <span>2 hours ago</span>
+                                    <span><%= posts[i].time %></span>
                                 </div>
                              </div>
-                            <p><%=posts[i].text.substring(0, 100) + " ..."%></p>
-                            <a href="/postPage/<%=posts[i].title%>">Read More</a>
+                             <div>
+                                <p><%=posts[i].text.substring(0, 100) + " ..."%></p>
+                             </div>
+                             <div>
+                                <a href="/postPage/<%=posts[i].title%>" class="read-more">Read More</a>
+                             </div>
                             <div class="entry-interactions">
-                                <div class="emoji-divs comment"><a href="" class="comment-link"><i class="fa-regular fa-comment fa-lg"></i></a><span>0</span></div>
-                                <div class="emoji-divs like"><i class="fa-regular fa-thumbs-up fa-lg" id="like-reaction"></i><span>0</span></div>
-                                <div class="emoji-divs heart"><i class="fa-regular fa-heart fa-lg" id="heart-reaction"></i><span>0</span></div>
-                                <div class="emoji-divs hate"><i class="far fa-thumbs-down" id="hate-reaction"></i></i><span>0</span></div>
+                                <div class="emoji-divs comment"><a href="" class="comment-link"><i class="fa-regular fa-comment fa-lg">0</i></a></div>
+                                <div class="emoji-divs like"><i class="fa-regular fa-thumbs-up fa-lg like-reaction">0</i></div>
+                                <div class="emoji-divs heart"><i class="fa-regular fa-heart fa-lg heart-reaction">0</i></div>
+                                <div class="emoji-divs hate"><i class="far fa-thumbs-down fa-lg hate-reaction">0</i></div>
                             </div>
                         </div>
                     </div>

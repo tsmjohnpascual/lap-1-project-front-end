@@ -65,6 +65,9 @@ a {
 }
 
 .entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding: 2% 5%;
 }
 
@@ -73,11 +76,7 @@ a {
 }
 
 .read-more {
-    color: #395B64;
-}
-
-.read-more:hover {
-    color: #2C3333;
+    color: black;
 }
 
 span {
@@ -163,6 +162,7 @@ textarea {
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 input[type=button] {

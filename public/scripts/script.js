@@ -5,6 +5,7 @@ const url = "https://api.giphy.com/v1/gifs/search?api_key=goUgQEQqeYYGEBmKW7QbDq
 
 document.addEventListener("DOMContentLoaded", getGif)
 document.addEventListener("DOMContentLoaded", pasteGif)
+document.addEventListener("DOMContentLoaded", reaction)
 
 function getGif () {
     document.getElementById("btnSearch").addEventListener("click", e => {
@@ -29,6 +30,7 @@ function getGif () {
 
 function pasteGif () {
     let elements = document.querySelectorAll(".gif-size")
+    let gifInput = document.querySelector("input[type=hidden]")
 
     for (let i = 0; i < elements.length; i++) {
         elements[i].addEventListener("click", e => {
@@ -36,9 +38,18 @@ function pasteGif () {
             let gifImg = document.getElementById("gifAttachment")
             gifImg.src = elements[i].src
             gifImg.alt = elements[i].alt
+            gifInput.value = elements[i].src
         })
     }
         
+}
+
+function reaction () {
+    let like = document.querySelector(".like-reaction")
+    like.addEventListener("click", e => {
+        e.preventDefault()
+        like.textContent = "1"
+    })
 }
 
 
